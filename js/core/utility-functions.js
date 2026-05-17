@@ -6,6 +6,10 @@
 (function () {
   'use strict';
 
+  // Guard: prevent duplicate definitions
+  if (window.__utilityFunctionsLoaded) return;
+  window.__utilityFunctionsLoaded = true;
+
   // ===== Toast Notifications =====
   window.showToast = function (message, isError = false) {
     const existing = document.querySelector('.toast-notification');
