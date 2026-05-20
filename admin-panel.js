@@ -40,7 +40,6 @@ function initThemeSystem() {
   }
 
   themeBtn.addEventListener('click', () => {
-<<<<<<< HEAD
 
     document.body.classList.toggle('light-mode');
 
@@ -66,12 +65,6 @@ function initThemeSystem() {
       'success'
     );
 
-=======
-    const isLight = document.body.classList.toggle('light-mode');
-    icon.className = isLight ? 'fa-solid fa-sun' : 'fa-solid fa-moon';
-    localStorage.setItem('theme', isLight ? 'light' : 'dark');
-    if (typeof showLiveToast === 'function') showLiveToast(isLight ? 'Switched to Light Theme' : 'Switched to Premium Dark Theme', 'success');
->>>>>>> eccf14e1002113203ac4f66d353ffc4617527b71
   });
 
 }
@@ -149,15 +142,11 @@ function switchMockLayout(layout) {
 
   });
 
-<<<<<<< HEAD
   showLiveToast(
     `Switched framework layout to: ${layout.toUpperCase()}`,
     'success'
   );
 
-=======
-  if (typeof showLiveToast === 'function') showLiveToast(`Switched framework layout to: ${layout.toUpperCase()}`, 'success');
->>>>>>> eccf14e1002113203ac4f66d353ffc4617527b71
 }
 
 function triggerLayoutGlow() {
@@ -271,7 +260,6 @@ function updateAnalyticsPeriod(period) {
       `${dataset.doughnutVal}, 100`;
   }
 
-<<<<<<< HEAD
   if (doughnutValue) {
     doughnutValue.textContent =
       `${dataset.doughnutVal}%`;
@@ -282,9 +270,6 @@ function updateAnalyticsPeriod(period) {
     'success'
   );
 
-=======
-  if (typeof showLiveToast === 'function') showLiveToast(`Updated metrics data for period: ${period.toUpperCase()}`, 'success');
->>>>>>> eccf14e1002113203ac4f66d353ffc4617527b71
 }
 
 function triggerMetricPulse() {
@@ -331,7 +316,6 @@ function toggleMiniSidebarCollapse() {
 
   }
 
-<<<<<<< HEAD
   showLiveToast(
     isCollapsed
       ? 'Sidebar Collapsed (Space-Saver)'
@@ -362,17 +346,6 @@ function switchMiniSidebarLink(elem) {
     'success'
   );
 
-=======
-  if (typeof showLiveToast === 'function') showLiveToast(isCollapsed ? 'Sidebar Collapsed (Space-Saver)' : 'Sidebar Expanded', 'success');
-}
-
-function switchMiniSidebarLink(elem) {
-  const links = document.querySelectorAll('.mini-sidebar-menu li');
-  links.forEach(l => l.classList.remove('active'));
-  elem.parentNode.classList.add('active');
-  const txt = elem.querySelector('span').textContent;
-  if (typeof showLiveToast === 'function') showLiveToast(`Opened section: ${txt}`, 'success');
->>>>>>> eccf14e1002113203ac4f66d353ffc4617527b71
 }
 
 /* ==========================================
@@ -426,16 +399,12 @@ function simulateKpiBounce() {
     }, 300);
 
   });
-<<<<<<< HEAD
 
   showLiveToast(
     'KPI Telemetry Counters Refreshed',
     'success'
   );
 
-=======
-  if (typeof showLiveToast === 'function') showLiveToast('KPI Telemetry Counters Refreshed', 'success');
->>>>>>> eccf14e1002113203ac4f66d353ffc4617527b71
 }
 
 /* ==========================================
@@ -528,84 +497,29 @@ function toggleUserRowStatus(btn) {
 
     statusSpan.className = 'td-status paused';
     statusSpan.textContent = 'Paused';
-<<<<<<< HEAD
 
     showLiveToast(
       'User Account Suspended',
       'warning'
     );
 
-=======
-    if (typeof showLiveToast === 'function') showLiveToast('User Account Suspended', 'warning');
->>>>>>> eccf14e1002113203ac4f66d353ffc4617527b71
   } else {
 
     statusSpan.className = 'td-status active';
     statusSpan.textContent = 'Active';
-<<<<<<< HEAD
 
     showLiveToast(
       'User Account Restored',
       'success'
     );
 
-=======
-    if (typeof showLiveToast === 'function') showLiveToast('User Account Restored', 'success');
->>>>>>> eccf14e1002113203ac4f66d353ffc4617527b71
   }
 
 }
 
-<<<<<<< HEAD
 /* ==========================================
    8. CODE & CLIPBOARD
 ========================================== */
-=======
-function simulateUserAddition() {
-  const tableBody = document.querySelector('#user-directory-table tbody');
-  if (!tableBody) return;
-
-  const names = ['Evelyn Reed', 'Daniel Craig', 'Klaus Mikaelson', 'Diana Prince'];
-  const emails = ['ereed@uiverse.io', 'dcraig@uiverse.io', 'klaus@uiverse.io', 'diana@uiverse.io'];
-  const roles = ['operator', 'reviewer'];
-  const avatarIds = [44, 21, 62, 59];
-
-  const randomIdx = Math.floor(Math.random() * names.length);
-  const selectedRole = roles[Math.floor(Math.random() * roles.length)];
-
-  const tr = document.createElement('tr');
-  tr.className = 'user-row';
-  tr.innerHTML = `
-    <td>
-      <div class="td-checkbox-wrap">
-        <input type="checkbox" class="user-row-checkbox">
-      </div>
-    </td>
-    <td>
-      <div class="td-profile-box">
-        <img src="https://i.pravatar.cc/100?img=${avatarIds[randomIdx]}" alt="avatar" class="td-avatar">
-        <div class="td-profile-info">
-          <strong>${names[randomIdx]}</strong>
-          <span>${emails[randomIdx]}</span>
-        </div>
-      </div>
-    </td>
-    <td><span class="td-role-badge ${selectedRole}">${selectedRole.toUpperCase()}</span></td>
-    <td><span class="td-status active">Active</span></td>
-    <td>
-      <button type="button" class="td-action-icon-btn" onclick="toggleUserRowStatus(this)"><i class="fa-solid fa-power-off"></i> Toggle</button>
-    </td>
-  `;
-
-  tableBody.appendChild(tr);
-  filterUserDirectoryTable();
-  if (typeof showLiveToast === 'function') showLiveToast(`Added operator row: ${names[randomIdx]}`, 'success');
-}
-
-// ==========================================
-// 8. CODE DISPLAY & CLIPBOARD UTILS
-// ==========================================
->>>>>>> eccf14e1002113203ac4f66d353ffc4617527b71
 function toggleCode(id) {
 
   const pre =
@@ -638,7 +552,6 @@ async function copyCode(id) {
 
   if (!pre) return;
 
-<<<<<<< HEAD
   const code =
     pre.querySelector('code');
 
@@ -670,14 +583,6 @@ async function copyCode(id) {
 
   }
 
-=======
-  const rawCode = pre.querySelector('code').textContent;
-  navigator.clipboard.writeText(rawCode).then(() => {
-    if (typeof showLiveToast === 'function') showLiveToast('Source code copied to clipboard!', 'success');
-  }).catch(() => {
-    if (typeof showLiveToast === 'function') showLiveToast('Copy failed, please retry.', 'error');
-  });
->>>>>>> eccf14e1002113203ac4f66d353ffc4617527b71
 }
 
 /* ==========================================
@@ -767,18 +672,12 @@ function showLiveToast(message, type = 'success') {
    10. SHOWCASE TEST
 ========================================== */
 function triggerAllShowcase() {
-<<<<<<< HEAD
 
   showLiveToast(
     'Commencing Sequenced Showcase Diagnostics...',
     'success'
   );
 
-=======
-  if (typeof showLiveToast === 'function') showLiveToast('Commencing Sequenced Showcase Diagnostics...', 'success');
-  
-  // Step 1: Layout toggle
->>>>>>> eccf14e1002113203ac4f66d353ffc4617527b71
   setTimeout(() => {
     switchMockLayout('glass');
   }, 1000);
@@ -816,7 +715,6 @@ function resetAllPanels() {
   ) {
     toggleMiniSidebarCollapse();
   }
-<<<<<<< HEAD
 
   showLiveToast(
     'All premium dashboards reset to baseline.',
@@ -824,8 +722,3 @@ function resetAllPanels() {
   );
 
 }
-=======
-  
-  if (typeof showLiveToast === 'function') showLiveToast('All premium dashboards reset to baseline.', 'success');
-}
->>>>>>> eccf14e1002113203ac4f66d353ffc4617527b71
