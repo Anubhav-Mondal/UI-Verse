@@ -42,6 +42,9 @@ jobs:
       - name: Component metadata check
         run: npm run components:version:check
 
+      - name: Component versioning regression tests
+        run: npm run test:versioning:check
+
       - name: Component registry consistency check
         run: npm run components:registry:check
 
