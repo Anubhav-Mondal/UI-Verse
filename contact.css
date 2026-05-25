@@ -562,19 +562,42 @@
 }
 
 .footer-col ul li a {
-  color: #888;
+  position: relative;
+  color: #a1a1aa;
   text-decoration: none;
-  font-size: 14px;
-  transition: color var(--transition);
+  font-size: 15px;
+  transition: all 0.3s ease;
+  display: inline-block;
 }
 
+/* Hover Animation */
 .footer-col ul li a:hover {
-  color: var(--accent);
+  color: #ff7a3d;  
+  transform: translateX(6px);
+}
+
+/* Animated Underline */
+.footer-col ul li a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0%;
+  height: 2px;
+  background: #ff7a3d;
+  transition: width 0.3s ease;
+  border-radius: 10px;
+}
+
+.footer-col ul li a:hover::after {
+  width: 100%;
 }
 
 .socials {
   display: flex;
   gap: 12px;
+  padding-right: 12px;
+  margin-right: 12px;
 }
 
 .socials a {
@@ -642,5 +665,5 @@
   padding: 20px 48px;
   text-align: center;
   font-size: 13px;
-  color: #555;
+  color: #aaa;
 }
