@@ -8,6 +8,10 @@ const SNIPPETS_INDEX = path.join(ROOT, 'data', 'snippets', 'index.json');
 
 function loadJson(p){ return JSON.parse(fs.readFileSync(p,'utf8')); }
 function computeHash(s){ return crypto.createHash('sha1').update(s, 'utf8').digest('hex'); }
+function resolveEntryPath(entryPath){
+  if (typeof entryPath !== 'string' || !entryPath) return null;
+  return path.isAbsolute(entryPath) ? entryPath : path.join(ROOT, entryPath);
+}
 function extractSnippet(html){
   const mainMatch = html.match(/<main[\s\S]*?>[\s\S]*?<\/main>/i);
   if(mainMatch) return mainMatch[0].trim();
@@ -27,13 +31,13 @@ function validate(){
 
   for(const entry of index){
     const id = entry.id;
-    const htmlPath = path.join(ROOT, entry.html);
-    const jsxPath = path.join(ROOT, entry.jsx);
-    const vuePath = path.join(ROOT, entry.vue);
+    const htmlPath = resolveEntryPath(entry.html || entry.htmlFile);
+    const jsxPath = resolveEntryPath(entry.jsx);
+    const vuePath = resolveEntryPath(entry.vue);
     const missing = [];
-    if(!fs.existsSync(htmlPath)) missing.push('html');
-    if(!fs.existsSync(jsxPath)) missing.push('jsx');
-    if(!fs.existsSync(vuePath)) missing.push('vue');
+    if(!htmlPath || !fs.existsSync(htmlPath)) missing.push('html');
+    if(!jsxPath || !fs.existsSync(jsxPath)) missing.push('jsx');
+    if(!vuePath || !fs.existsSync(vuePath)) missing.push('vue');
 
     let hashOk = false;
     if(fs.existsSync(htmlPath)){
