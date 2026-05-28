@@ -16,6 +16,8 @@
   <link rel="stylesheet" href="recovery.css">
 </head>
 <body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
 
 <!-- ================= SIDEBAR ================= -->
 <aside class="sidebar" id="sidebar">
@@ -175,7 +177,7 @@
 
   <div class="search-bar">
     <i class="fa-solid fa-magnifying-glass search-icon" aria-hidden="true"></i>
-    <input type="text" placeholder="Search components..." id="searchInput" onkeydown="handleSearch(event)">
+    <input type="text" placeholder="Search components..." id="searchInput" onkeydown="handleSearch(event)" data-a11y-remediation="label-needed">
     <kbd class="search-kbd">⌘K</kbd>
   </div>
 

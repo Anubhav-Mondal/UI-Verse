@@ -353,7 +353,7 @@
   <!-- ================= NAVBAR ================= -->
   <header class="navbar" id="navbar" role="navigation" aria-label="Top navigation bar">
     <button class="menu-toggle" onclick="toggleSidebar()" aria-label="Toggle sidebar navigation" aria-expanded="false"
-      aria-controls="sidebar">
+      aria-controls="sidebar" data-a11y-remediation="button-label-needed">
       <i class="fa-solid fa-bars" aria-hidden="true"></i>
     </button>
     <div class="logo" aria-label="UIverse - Component library home">UIverse</div>
@@ -361,7 +361,7 @@
       <label for="searchInput" class="sr-only">Search components</label>
       <i class="fa-solid fa-magnifying-glass search-icon" aria-hidden="true"></i>
       <input type="text" id="searchInput" placeholder="Search components..." oninput="liveFilter(this.value)"
-        aria-label="Search for components" />
+        aria-label="Search for components" / data-a11y-remediation="label-needed">
       <kbd class="search-kbd" aria-label="Keyboard shortcut">⌘K</kbd>
     </div>
     <div class="nav-right">

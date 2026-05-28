@@ -12,6 +12,8 @@
   <link rel="stylesheet" href="traceability.css">
 </head>
 <body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
   <main class="trace-shell">
     <section class="trace-hero">
       <div>
@@ -39,7 +41,7 @@
 
         <label>
           Or batch ID
-          <input id="batch-id-input" type="number" min="1" step="1" placeholder="123">
+          <input id="batch-id-input" type="number" min="1" step="1" placeholder="123" data-a11y-remediation="label-needed">
         </label>
 
         <button id="generate-btn" type="button" class="primary-btn">Generate QR code</button>

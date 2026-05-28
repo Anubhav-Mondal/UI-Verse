@@ -14,6 +14,8 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
 </head>
 
 <body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
 
 <div>
 
@@ -85,7 +87,7 @@ Good Evening
 00:00:00
 </h1>
 
-<button id="startBtn">
+<button id="startBtn" data-a11y-remediation="button-label-needed">
 Start
 </button>
 
@@ -111,7 +113,7 @@ Reset
 
 <input type="number"
 id="minutesInput"
-placeholder="Minutes">
+placeholder="Minutes" data-a11y-remediation="label-needed">
 
 <input type="number"
 id="secondsInput"

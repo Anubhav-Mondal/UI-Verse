@@ -24,6 +24,8 @@
   </style>
   </head>
 <body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
 
 <div class="test-container">
   <h1>🎯 Command Palette Feature Test</h1>
@@ -420,7 +422,7 @@
         class="command-palette-input" 
         placeholder="Search components... (Cmd+K)"
         autocomplete="off"
-      />
+      / data-a11y-remediation="label-needed">
     </div>
     <ul id="commandPaletteResults" class="command-palette-results"></ul>
     <div class="command-palette-footer">

@@ -32,6 +32,8 @@
   </head>
 
 <body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
 
   <!-- ================= NAVBAR ================= -->
   <header class="navbar">
@@ -53,7 +55,7 @@
       <button
         class="theme-toggle"
         id="darkModeToggle"
-      >
+       data-a11y-remediation="button-label-needed">
         <i class="fa-solid fa-moon"></i>
       </button>
 
@@ -922,7 +924,7 @@
       <p>Get notified when new components drop.</p>
 
       <div class="newsletter-form">
-        <input type="email" placeholder="your@email.com" />
+        <input type="email" placeholder="your@email.com" / data-a11y-remediation="label-needed">
         <button type="button">
           <i class="fa-solid fa-paper-plane"></i>
         </button>

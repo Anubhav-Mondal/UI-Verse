@@ -184,6 +184,8 @@
 </head>
 
 <body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
 
   <div class="todo-container">
 
@@ -194,7 +196,7 @@
         type="text"
         id="taskInput"
         placeholder="Add your task..."
-      >
+       data-a11y-remediation="label-needed">
 
       <button onclick="addTask()">
         Add

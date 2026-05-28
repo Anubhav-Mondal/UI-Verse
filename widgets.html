@@ -20,6 +20,8 @@
 </head>
 
 <body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
 
   <!-- ================= SIDEBAR ================= -->
   <aside class="sidebar" id="sidebar">
@@ -351,7 +353,7 @@
 
   <!-- ================= NAVBAR ================= -->
   <header class="navbar" id="navbar">
-    <button type="button" class="menu-toggle" onclick="toggleSidebar()" aria-label="Toggle Menu">
+    <button type="button" class="menu-toggle" onclick="toggleSidebar()" aria-label="Toggle Menu" data-a11y-remediation="button-label-needed">
       <i class="fa-solid fa-bars"></i>
     </button>
 
@@ -359,7 +361,7 @@
 
     <div class="search-bar">
       <i class="fa-solid fa-magnifying-glass search-icon"></i>
-      <input type="text" id="searchInput" placeholder="Search components...">
+      <input type="text" id="searchInput" placeholder="Search components..." data-a11y-remediation="label-needed">
       <kbd class="search-kbd">⌘K</kbd>
     </div>
 

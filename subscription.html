@@ -16,6 +16,8 @@
   <link rel="stylesheet" href="subscription.css">
 </head>
 <body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
 
 <!-- ================= SIDEBAR ================= -->
 <aside class="sidebar" id="sidebar">
@@ -343,7 +345,7 @@
 </aside>
 
 <div class="pricing-toggle">
-  <button class="toggle active" onclick="setBilling('monthly')">Monthly</button>
+  <button class="toggle active" onclick="setBilling('monthly')" data-a11y-remediation="button-label-needed">Monthly</button>
   <button class="toggle" onclick="setBilling('annual')">
     Annual <span>Save 20%</span>
   </button>
@@ -425,7 +427,7 @@
   
   <div class="search-bar">
     <i class="fa-solid fa-magnifying-glass search-icon"></i>
-    <input type="text" placeholder="Search components..." id="searchInput" onkeydown="handleSearch(event)" />
+    <input type="text" placeholder="Search components..." id="searchInput" onkeydown="handleSearch(event)" / data-a11y-remediation="label-needed">
     <kbd class="search-kbd">⌘K</kbd>
   </div>
 

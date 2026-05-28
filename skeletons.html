@@ -18,6 +18,8 @@
     <script src="js/loader.js" defer></script>
   </head>
   <body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
     <!-- ================= SIDEBAR ================= -->
     <aside class="sidebar" id="sidebar">
       <div class="sidebar-brand">
@@ -49,7 +51,7 @@
           <div class="topbar-search">
             <label class="screen-reader-text" for="component-search">Search components</label>
             <input id="component-search" type="search" class="search-input" placeholder="Search skeleton components..." />
-            <button type="button" class="search-action"><i class="fa-solid fa-magnifying-glass"></i></button>
+            <button type="button" class="search-action" data-a11y-remediation="button-label-needed"><i class="fa-solid fa-magnifying-glass"></i></button>
           </div>
         </div>
         <div class="topbar-right">

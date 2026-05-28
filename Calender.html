@@ -1,5 +1,5 @@
 <!doctype html>
-<html>
+<html lang="en">
   <head>
   <link rel="stylesheet" href="dist/shared.css">
   <meta charset="utf-8">
@@ -9,6 +9,8 @@
     <script>location.replace('calendar.html');</script>
   </head>
   <body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
     Redirecting to <a href="calendar.html">calendar.html</a>
       <script src="dist/shared.js"></script>
 </body>
@@ -356,13 +358,13 @@ TOPBAR
     <input
       type="text"
       placeholder="Search calendar components..."
-    >
+     data-a11y-remediation="label-needed">
 
   </div>
 
   <div class="topbar-actions">
 
-    <button class="outline-btn">
+    <button class="outline-btn" data-a11y-remediation="button-label-needed">
       Docs
     </button>
 

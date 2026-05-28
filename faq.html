@@ -45,6 +45,8 @@
 </head>
 
 <body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
 
   <div class="container">
     <header class="navbar" id="navbar">
@@ -56,7 +58,7 @@
 
       <div class="search-bar">
         <i class="fa-solid fa-magnifying-glass search-icon"></i>
-        <input type="text" id="searchInput" placeholder="Search components..." onkeydown="handleSearch(event)">
+        <input type="text" id="searchInput" placeholder="Search components..." onkeydown="handleSearch(event)" data-a11y-remediation="label-needed">
         <kbd class="search-kbd">⌘K</kbd>
       </div>
 

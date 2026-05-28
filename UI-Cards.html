@@ -14,6 +14,8 @@
   </head>
 
 <body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
 <aside class="sidebar" id="sidebar">
   <div class="sidebar-brand">
     <span class="brand-icon">⬡</span>
@@ -325,7 +327,7 @@
   <div class="logo">UIverse</div>
   <div class="search-bar">
     <i class="fa-solid fa-magnifying-glass search-icon"></i>
-    <input type="text" id="searchInput" placeholder="Search components..." onkeydown="handleSearch(event)" />
+    <input type="text" id="searchInput" placeholder="Search components..." onkeydown="handleSearch(event)" / data-a11y-remediation="label-needed">
     <kbd class="search-kbd">⌘K</kbd>
   </div>
   <div class="nav-right">

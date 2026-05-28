@@ -18,7 +18,7 @@
     </div>
     <div class="page-hero-right">
       <div class="hero-btn-preview">
-        <button class="gradient-btn preview-float">Gradient</button>
+        <button class="gradient-btn preview-float" data-a11y-remediation="button-label-needed">Gradient</button>
         <button class="neon-btn preview-float" style="animation-delay:0.2s">Neon</button>
         <button class="btn-3d preview-float" style="animation-delay:0.4s">3D</button>
       </div>
@@ -33,7 +33,7 @@
     <button class="filter-btn" onclick="filterCards('effect', this)">Effects</button>
     <div class="filter-search">
       <i class="fa-solid fa-magnifying-glass"></i>
-      <input type="text" placeholder="Filter buttons..." oninput="liveFilter(this.value)" />
+      <input type="text" placeholder="Filter buttons..." oninput="liveFilter(this.value)" / data-a11y-remediation="label-needed">
     </div>
   </div>
 

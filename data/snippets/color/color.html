@@ -30,7 +30,7 @@
 
   <!-- Filter Bar -->
   <div class="filter-bar">
-    <button class="filter-btn active" onclick="filterSection('all', this)">All</button>
+    <button class="filter-btn active" onclick="filterSection('all', this)" data-a11y-remediation="button-label-needed">All</button>
     <button class="filter-btn" onclick="filterSection('trending', this)">Trending</button>
     <button class="filter-btn" onclick="filterSection('gradients', this)">Gradients</button>
     <button class="filter-btn" onclick="filterSection('palettes', this)">Palettes</button>
@@ -39,7 +39,7 @@
     <button class="filter-btn" onclick="filterSection('glassmorphism', this)">Glass</button>
     <div class="filter-search">
       <i class="fa-solid fa-magnifying-glass"></i>
-      <input type="text" placeholder="Filter colors..." oninput="liveFilter(this.value)" />
+      <input type="text" placeholder="Filter colors..." oninput="liveFilter(this.value)" / data-a11y-remediation="label-needed">
     </div>
   </div>
 

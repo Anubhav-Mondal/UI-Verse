@@ -8,12 +8,14 @@
   <link rel="stylesheet" href="gallery.css">
 </head>
 <body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
 
 <h1>Infinite Scroll Gallery</h1>
 
 <!-- SEARCH + FILTER BAR -->
 <div class="toolbar">
-  <input type="text" id="searchInput" placeholder="Search images..." />
+  <input type="text" id="searchInput" placeholder="Search images..." / data-a11y-remediation="label-needed">
 
   <select id="categoryFilter">
     <option value="all">All</option>
@@ -39,7 +41,7 @@
 <!-- IMAGE MODAL -->
 <div class="modal" id="modal">
   <span class="close" id="closeModal">&times;</span>
-  <img id="modalImg" />
+  <img id="modalImg" / alt="">
 </div>
 
 <script src="gallery.js"></script>

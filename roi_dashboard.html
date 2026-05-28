@@ -12,6 +12,8 @@
   <link rel="stylesheet" href="roi_dashboard.css">
 </head>
 <body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
   <main class="roi-shell">
     <section class="hero-panel">
       <div class="hero-copy">
@@ -40,7 +42,7 @@
         <div class="field-grid">
           <label>
             Acreage
-            <input name="acreage" type="number" min="0.1" step="0.1" value="40" required>
+            <input name="acreage" type="number" min="0.1" step="0.1" value="40" required data-a11y-remediation="label-needed">
           </label>
           <label>
             Seed Cost

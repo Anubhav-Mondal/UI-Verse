@@ -17,6 +17,8 @@
   </head>
 
 <body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
 
 <div class="main-content">
 
@@ -24,10 +26,10 @@
   <header class="topbar">
     <div class="search-box">
       <i class="fa-solid fa-magnifying-glass"></i>
-      <input type="text" placeholder="Search stepper components..." id="searchInput">
+      <input type="text" placeholder="Search stepper components..." id="searchInput" data-a11y-remediation="label-needed">
     </div>
     <div class="topbar-actions">
-      <button class="add-btn" onclick="advanceAllSteps()"><i class="fa-solid fa-play"></i> Advance All</button>
+      <button class="add-btn" onclick="advanceAllSteps()" data-a11y-remediation="button-label-needed"><i class="fa-solid fa-play"></i> Advance All</button>
       <button class="collection-btn" onclick="resetAllSteps()"><i class="fa-solid fa-rotate-left"></i> Reset All</button>
       <button class="theme-btn"><i class="fa-solid fa-moon"></i></button>
     </div>

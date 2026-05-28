@@ -4,11 +4,11 @@
   <header class="topbar">
     <div class="search-box">
       <i class="fa-solid fa-magnifying-glass"></i>
-      <input type="text" placeholder="Search progress components..." id="searchInput">
+      <input type="text" placeholder="Search progress components..." id="searchInput" data-a11y-remediation="label-needed">
     </div>
 
     <div class="topbar-actions">
-      <button class="add-btn" onclick="fillAllProgress()"><i class="fa-solid fa-play"></i> Fill All</button>
+      <button class="add-btn" onclick="fillAllProgress()" data-a11y-remediation="button-label-needed"><i class="fa-solid fa-play"></i> Fill All</button>
       <button class="collection-btn" onclick="resetAllProgress()"><i class="fa-solid fa-rotate-left"></i> Reset All</button>
       <button class="theme-btn"><i class="fa-solid fa-moon"></i></button>
     </div>

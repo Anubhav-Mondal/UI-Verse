@@ -196,6 +196,8 @@
 </head>
 
 <body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
   <div class="music-player">
 
     <div class="top-bar">
@@ -206,7 +208,7 @@
 
     <div class="album-wrapper">
       <div class="vinyl-ring"></div>
-      <img class="album-cover" src="https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?q=80&w=1200&auto=format&fit=crop" />
+      <img class="album-cover" src="https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?q=80&w=1200&auto=format&fit=crop" / alt="">
     </div>
 
     <div class="song-details">
@@ -227,7 +229,7 @@
     </div>
 
     <div class="controls">
-      <button class="control-btn"><i class="fa-solid fa-backward-step"></i></button>
+      <button class="control-btn" data-a11y-remediation="button-label-needed"><i class="fa-solid fa-backward-step"></i></button>
       <button class="play-btn" id="playBtn"><i class="fa-solid fa-play"></i></button>
       <button class="control-btn"><i class="fa-solid fa-forward-step"></i></button>
     </div>

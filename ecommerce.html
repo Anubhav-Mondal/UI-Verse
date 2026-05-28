@@ -16,6 +16,8 @@
   <link rel="stylesheet" href="ecommerce.css">
   </head>
 <body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
 
 <!-- ================= SIDEBAR ================= -->
 <aside class="sidebar" id="sidebar">
@@ -371,7 +373,7 @@
             <div class="pc-color c2"></div>
             <div class="pc-color c3"></div>
           </div>
-          <button class="pc-add-btn">Add to Cart</button>
+          <button class="pc-add-btn" data-a11y-remediation="button-label-needed">Add to Cart</button>
         </div>
       </div>
       <div class="card-actions">
@@ -445,7 +447,7 @@
           <div class="co-grid full">
             <div class="co-input-group">
               <label>Cardholder Name</label>
-              <input type="text" placeholder="John Doe">
+              <input type="text" placeholder="John Doe" data-a11y-remediation="label-needed">
             </div>
           </div>
           <div class="co-grid full">

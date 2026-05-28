@@ -30,6 +30,8 @@
 </head>
 
 <body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
 
   <div class="editor-container">
 
@@ -48,12 +50,12 @@
 
       <div class="search-box">
         <i class="fa-solid fa-magnifying-glass"></i>
-        <input type="text" placeholder="Search files..." />
+        <input type="text" placeholder="Search files..." / data-a11y-remediation="label-needed">
       </div>
 
       <div class="section-title">
         <h2>Explorer</h2>
-        <button class="add-btn">
+        <button class="add-btn" data-a11y-remediation="button-label-needed">
           <i class="fa-solid fa-plus"></i>
         </button>
       </div>

@@ -10,6 +10,8 @@
   <link rel="stylesheet" href="menu.css" />
   </head>
 <body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
   <aside class="sidebar">
     <div class="sidebar-brand">
       <span class="brand-icon"><i class="fa-solid fa-bars"></i></span>
@@ -329,9 +331,9 @@
 
   <header class="navbar">
     <div class="logo">UIverse</div>
-    <div class="search-bar"><i class="fa-solid fa-magnifying-glass"></i><input placeholder="Search components..." /></div>
+    <div class="search-bar"><i class="fa-solid fa-magnifying-glass"></i><input placeholder="Search components..." / data-a11y-remediation="label-needed"></div>
     <div class="nav-actions">
-      <button class="outline-btn">Docs</button>
+      <button class="outline-btn" data-a11y-remediation="button-label-needed">Docs</button>
       <button class="primary-btn">Add Component</button>
     </div>
   </header>

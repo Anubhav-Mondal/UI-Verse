@@ -19,6 +19,8 @@
   </head>
 
 <body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
 <header class="navbar">
 
   <div class="logo">
@@ -41,7 +43,7 @@
 </nav>
 
 
-  <button class="theme-toggle" id="themeToggle">
+  <button class="theme-toggle" id="themeToggle" data-a11y-remediation="button-label-needed">
     <i class="fa-solid fa-moon"></i>
   </button>
 
@@ -409,7 +411,7 @@
 <div>
   <form class="scearch">
     <i class="fa-solid fa-magnifying-glass"></i>
-    <input type="text" placeholder="Filter Articles..." id="articleSearch">
+    <input type="text" placeholder="Filter Articles..." id="articleSearch" data-a11y-remediation="label-needed">
   </form>
 </div>
 

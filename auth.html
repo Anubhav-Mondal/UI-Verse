@@ -27,6 +27,8 @@
   <link rel="stylesheet" href="auth.css">
   </head>
 <body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
 
 <div class="app-container">
 
@@ -361,10 +363,10 @@
     <div class="top-bar">
       <div class="search-wrapper">
         <i class="fa-solid fa-magnifying-glass"></i>
-        <input type="text" class="search-input" placeholder="Search components… (Press ⌘K)">
+        <input type="text" class="search-input" placeholder="Search components… (Press ⌘K)" data-a11y-remediation="label-needed">
       </div>
       <div class="header-actions">
-        <button class="btn-header primary"><i class="fa-solid fa-plus"></i> Add Component</button>
+        <button class="btn-header primary" data-a11y-remediation="button-label-needed"><i class="fa-solid fa-plus"></i> Add Component</button>
         <button class="btn-header"><i class="fa-solid fa-bookmark"></i> My Collection</button>
         <button class="btn-header-icon" id="mode-toggle-btn" title="Toggle Theme"><i class="fa-solid fa-moon"></i></button>
       </div>

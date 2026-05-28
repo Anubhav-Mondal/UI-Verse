@@ -1,5 +1,5 @@
 <!doctype html>
-<html>
+<html lang="en">
   <head>
   <link rel="stylesheet" href="dist/shared.css">
   <meta charset="utf-8">
@@ -9,6 +9,8 @@
     <script>location.replace('contributors.html');</script>
   </head>
   <body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
     Redirecting to <a href="contributors.html">contributors.html</a>
       <script src="dist/shared.js"></script>
 </body>
@@ -47,7 +49,7 @@
       <h3>Stay Updated</h3>
       <p>Get notified when new components drop.</p>
       <div class="newsletter-form">
-        <input type="email" placeholder="your@email.com" />
+        <input type="email" placeholder="your@email.com" / data-a11y-remediation="label-needed">
         <button type="button" onclick="subscribe()">Subscribe</button>
       </div>
     </div>

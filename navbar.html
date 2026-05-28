@@ -19,6 +19,8 @@
   </head>
 
 <body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
 
   <!-- ================= SIDEBAR ================= -->
   <aside class="sidebar" id="sidebar">
@@ -356,14 +358,14 @@
   <!-- ================= NAVBAR ================= -->
   <header class="navbar" id="navbar" role="navigation" aria-label="Top navigation">
     <button class="menu-toggle" onclick="toggleSidebar()" aria-controls="sidebar" aria-expanded="false"
-      aria-label="Toggle sidebar">
+      aria-label="Toggle sidebar" data-a11y-remediation="button-label-needed">
       <i class="fa-solid fa-bars"></i>
     </button>
     <div class="logo">UIverse</div>
     <div class="search-bar">
       <i class="fa-solid fa-magnifying-glass search-icon"></i>
       <input type="text" id="searchInput" placeholder="Search navbars..." oninput="liveFilter(this.value)"
-        aria-label="Search components" />
+        aria-label="Search components" / data-a11y-remediation="label-needed">
       <kbd class="search-kbd">Ctrl K</kbd>
       <kbd class="search-kbd">⌘K</kbd>
     </div>

@@ -17,7 +17,7 @@
     <div class="page-hero-right">
       <div class="tabs-hero-preview">
         <div class="thp-nav">
-          <button class="thp-btn thp-active">HTML</button>
+          <button class="thp-btn thp-active" data-a11y-remediation="button-label-needed">HTML</button>
           <button class="thp-btn">CSS</button>
           <button class="thp-btn">JS</button>
         </div>
@@ -50,7 +50,7 @@
         <div class="control-group">
           <label class="control-label">Accent Theme Color</label>
           <div class="control-color-wrap">
-            <input type="color" id="sandboxColor" class="control-color" value="#7b61ff" oninput="updateSandbox()" />
+            <input type="color" id="sandboxColor" class="control-color" value="#7b61ff" oninput="updateSandbox()" / data-a11y-remediation="label-needed">
             <span id="sandboxColorVal" class="slider-val">#7b61ff</span>
           </div>
         </div>
