@@ -730,6 +730,10 @@
       return;
     }
 
+
+
+
+    
     let score = 0;
 
     // Length check
@@ -796,6 +800,35 @@
       label.style.color = '#10b981';
     }
   }
+
+      });
+
+    const last = otpInputs[Math.min(pasted.length - 1, otpInputs.length - 1)];
+    if (last) last.focus();
+  });
+
+  input.addEventListener('input', () => {
+    input.value = input.value.replace(/\D/g, '');
+  });
+});
+
+
+const percent = (score / 4) * 100;
+fill.style.width = `${percent}%`;
+
+
+if (score === 0) {
+  label.textContent = 'Very Weak';
+} else if (score === 1) {
+  label.textContent = 'Weak';
+} else if (score === 2) {
+  label.textContent = 'Moderate';
+} else if (score === 3) {
+  label.textContent = 'Secure';
+} else {
+  label.textContent = 'Ultra Secure';
+}
+
 
   function handleResetPassword(event) {
     event.preventDefault();
