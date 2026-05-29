@@ -529,11 +529,11 @@
     </button>
 
     <button class="filter-btn">
-      Mini Players
+      Mini Player
     </button>
 
     <button class="filter-btn">
-      Vinyl
+      Vinyl Player
     </button>
 
     <button class="filter-btn">
@@ -560,19 +560,17 @@
   <section class="music-grid">
 
     <!-- PLAYER 1 -->
-    <div class="component-card">
+    <div class="component-card" data-cat="cards" data-name="glass music card">
+  <div class="card-top">
 
-      <div class="card-top">
+    <span class="card-label">
+      Glass Music Card
+    </span>
 
-        <span class="card-label">
-          Glass Music Card
-        </span>
-
-        <span class="card-tag tag-popular">
-          Popular
-        </span>
-
-      </div>
+    <span class="card-tag tag-popular">
+      Popular
+    </span>
+  </div>
 
       <div class="card-preview">
 
@@ -629,19 +627,18 @@
     </div>
 
     <!-- PLAYER 2 -->
-    <div class="component-card">
+   <div class="component-card" data-cat="vinyl" data-name="vinyl player">
+  <div class="card-top">
 
-      <div class="card-top">
+    <span class="card-label">
+      Vinyl Player
+    </span>
 
-        <span class="card-label">
-          Vinyl Player
-        </span>
+    <span class="card-tag tag-trending">
+      Trending
+    </span>
 
-        <span class="card-tag tag-trending">
-          Trending
-        </span>
-
-      </div>
+  </div>
 
       <div class="card-preview dark-preview">
 
@@ -677,19 +674,19 @@
     </div>
 
     <!-- PLAYER 3 -->
-    <div class="component-card">
+    <div class="component-card" data-cat="mini" data-name="mini player">
 
-      <div class="card-top">
+  <div class="card-top">
 
-        <span class="card-label">
-          Mini Player
-        </span>
+    <span class="card-label">
+      Mini Player
+    </span>
 
-        <span class="card-tag tag-essential">
-          Essential
-        </span>
+    <span class="card-tag tag-essential">
+      Essential
+    </span>
 
-      </div>
+  </div>
 
       <div class="card-preview">
 
@@ -740,19 +737,19 @@
     </div>
 
     <!-- PLAYER 4 -->
-    <div class="component-card">
+    <div class="component-card" data-cat="streaming" data-name="equalizer ui">
 
-      <div class="card-top">
+  <div class="card-top">
 
-        <span class="card-label">
-          Equalizer UI
-        </span>
+    <span class="card-label">
+      Equalizer UI
+    </span>
 
-        <span class="card-tag tag-trending">
-          Animated
-        </span>
-
-      </div>
+    <span class="card-tag tag-trending">
+      Animated
+    </span>
+    
+  </div>
 
       <div class="card-preview dark-preview">
 
@@ -992,6 +989,42 @@
       <p>© 2026 UIverse. Made with ❤️ for developers worldwide.</p>
     </div>
   </footer>
+
+  <script>
+document.querySelectorAll('.filter-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const category = btn.textContent.trim().toLowerCase(); // get button text
+    const cards = document.querySelectorAll('.component-card');
+    const buttons = document.querySelectorAll('.filter-btn');
+
+    // Reset active state
+    buttons.forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+
+    // Show/hide cards
+    cards.forEach(card => {
+      const cardCat = card.dataset.cat;
+      if (category === 'all' || cardCat === category) {
+        card.style.display = 'block';
+      } else {
+        card.style.display = 'none';
+      }
+    });
+  });
+});
+
+// Live search
+document.querySelector('.filter-search input').addEventListener('input', e => {
+  const query = e.target.value.toLowerCase();
+  const cards = document.querySelectorAll('.component-card');
+
+  cards.forEach(card => {
+    const name = card.dataset.name?.toLowerCase() || '';
+    const label = card.querySelector('.card-label')?.textContent.toLowerCase() || '';
+    card.style.display = (name.includes(query) || label.includes(query)) ? 'block' : 'none';
+  });
+});
+</script>
 
 
     <script src="dist/shared.js"></script>
